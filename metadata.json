@@ -1,0 +1,7 @@
+{
+  "name": "Copy of PaletteMaster LM (LAST MILE)",
+  "description": "Une application web mobile-first pour la gestion en temps réel du palettier de livraison dernier kilomètre, remplaçant le suivi Excel papier.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
