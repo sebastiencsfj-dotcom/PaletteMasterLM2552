@@ -131,7 +131,7 @@ if (!apiKey) {
 
       // Fix: Upgraded to 'gemini-3-pro-preview' for higher accuracy in complex image analysis and OCR extraction.
       const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-preview',
+        model: "gemini-1.5-flash",
         contents: {
           parts: [
             { text: prompt },
