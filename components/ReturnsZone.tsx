@@ -15,7 +15,7 @@ const ReturnsZone: React.FC<ReturnsZoneProps> = ({ items, onUpdate, sasItems, on
   const [confirmClear, setConfirmClear] = useState(false);
   const [showSasPicker, setShowSasPicker] = useState(false);
   
-  const MIN_ROWS = 25;
+  const MIN_ROWS = 50;
   const ROWS_COUNT = Math.max(MIN_ROWS, items.length);
 
   useEffect(() => {
