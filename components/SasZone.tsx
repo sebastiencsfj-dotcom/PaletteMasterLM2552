@@ -102,7 +102,13 @@ const SasZone: React.FC<SasZoneProps> = ({ items, onUpdate }) => {
 
     try {
       // Fix: Create new GoogleGenAI instance right before making an API call to ensure current configuration.
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
+
+if (!apiKey) {
+  throw new Error("Clé Gemini manquante : VITE_GEMINI_API_KEY");
+}
+
+      const ai = new GoogleGenAI({ apiKey });
       const prompt = `Tu es un expert en logistique IKEA / XPO Logistics. Analyse l'image de ce document (Bon de Livraison ou Bon de Retour).
 
       RÈGLES d'EXTRACTION STRICTES :
